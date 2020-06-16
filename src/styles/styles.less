@@ -1,0 +1,60 @@
+@import 'basics.less';
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.app {
+  width: 95%;
+  margin: auto auto;
+  p {
+    margin: 0 0 10px 0;
+  }
+  button {
+    appearance: none;
+    border: 1px solid #000;
+    margin: 0 2px;
+    outline: none;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  .date {
+    font-family: verdana;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+    top: 20px;
+    z-index: 2;
+    width: 100%;
+  }
+  .logo {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    width: 300px;
+  }
+  #line_chart {
+    clear: both;
+    height: 100%;
+    margin: auto auto;
+    padding-top: 5px;
+    width: 100%;
+  }
+  .line_chart_meta {
+    bottom: 50px;
+    font-family: verdana;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    .explainer {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+/* General styles */
+.clearfix___1yHqr {
+  zoom: 1;
+}
+.clearfix___1yHqr:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.ss-terms___dMEZ6 {
+  margin: 40px auto auto auto;
+  max-width: 450px;
+}
+.meta___3gcNx {
+  color: #333;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 0 10px 40px 10px;
+}
+.clear_both___a0DL_ {
+  clear: both;
+}
+.hidden___1aMNf {
+  display: none;
+}
+.nowrap___2n1o8 {
+  white-space: nowrap;
+}
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.app___2khK2 {
+  width: 95%;
+  margin: auto auto;
+}
+.app___2khK2 p {
+  margin: 0 0 10px 0;
+}
+.app___2khK2 button {
+  appearance: none;
+  border: 1px solid #000;
+  margin: 0 2px;
+  outline: none;
+}
+.app___2khK2 button:hover {
+  background-color: #ccc;
+}
+.app___2khK2 .date___2zbrl {
+  font-family: verdana;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+  top: 20px;
+  z-index: 2;
+  width: 100%;
+}
+.app___2khK2 .logo___XsJkZ {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  width: 300px;
+}
+.app___2khK2 #line_chart___aZAmd {
+  clear: both;
+  height: 100%;
+  margin: auto auto;
+  padding-top: 5px;
+  width: 100%;
+}
+.app___2khK2 .line_chart_meta___p3fCp {
+  bottom: 50px;
+  font-family: verdana;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  text-align: right;
+}
+.app___2khK2 .line_chart_meta___p3fCp .explainer___1QzSr {
+  font-size: 24px;
+}
+
