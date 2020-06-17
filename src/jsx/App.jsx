@@ -107,17 +107,18 @@ class App extends Component {
             radius:0,
             order:99,
             yAxisID:'left'
-          }/*,{
+          },{
             backgroundColor:'rgba(0, 174, 102, 1)',
             borderColor:'#000',
             borderWidth:4,
             data:[self.state.total_percent],
+            hidden:true,
             fill:false,
             label:'COVID-19 Total percent',
-            radius:0,
             order:77,
+            radius:0,
             yAxisID:'right'
-          }*/],
+          }],
           labels:[]
         },
         options:{
@@ -179,7 +180,7 @@ class App extends Component {
               }
             },{
               id:'right',
-              display:true,
+              display:false,
               gridLines:{
                 display:false
               },
@@ -221,11 +222,14 @@ class App extends Component {
           options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
           options.data.datasets[0].data.push(values.edits);
           options.data.datasets[1].data.push(values.total);
-          // options.data.datasets[2].data.push(values.total_percent);
+          options.data.datasets[2].data.push(values.total_percent);
           line_chart.update();
 
           if (data.values.length < 1) {
             clearInterval(interval);
+            options.data.datasets[2].hidden = false;
+            options.options.scales.yAxes[1].display = true;
+            line_chart.update(0);
           }
         }, 200);
       }
