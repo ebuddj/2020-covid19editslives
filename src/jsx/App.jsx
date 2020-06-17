@@ -110,7 +110,7 @@ class App extends Component {
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
             borderColor:'#000',
-            borderWidth:5,
+            borderWidth:4,
             data:[self.state.total_percent],
             fill:false,
             label:'COVID-19 Total percent',
