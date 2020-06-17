@@ -25,8 +25,8 @@ class App extends Component {
       line_chart_rendered:false,
       line_chart_rendered_16_9:false,
       line_chart_show_meta:false,
-      value:0,
       lives:0,
+      total:0,
       edits:0
     };
 
@@ -74,7 +74,8 @@ class App extends Component {
         return {
           date:values.date,
           edits:values.covid_edits_percent,
-          lives:(values.covid_lives_percent + values.covid_edits_percent)
+          lives:values.covid_lives_percent,
+          total:(values.covid_lives_percent + values.covid_edits_percent)
         }
       });
 
@@ -106,8 +107,8 @@ class App extends Component {
           },
           legend:{
             align:'left',
+            display:false,
             position:'top',
-            display:true,
             labels: {
               fontSize:20,
               fontStyle:'bold'
@@ -168,12 +169,13 @@ class App extends Component {
           self.setState((state, props) => ({
             date:values.date,
             edits:values.edits,
-            lives:values.lives
+            lives:values.lives,
+            total:values.total
           }));
 
           options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
           options.data.datasets[0].data.push(values.edits);
-          options.data.datasets[1].data.push(values.lives);
+          options.data.datasets[1].data.push(values.total);
           line_chart.update();
 
           if (data.values.length < 1) {
@@ -204,7 +206,11 @@ class App extends Component {
     return (
       <div className={style.app}>
         <div className={style.date}></div>
-        <img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/>
+        <div className={style.legend}>
+          <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
+          <div className={style.lives}>{this.state.lives}% COVID-19 Lives</div>
+          <div className={style.edits}>{this.state.edits}% COVID-19 Edits</div>
+        </div>
         <div style={(this.state.line_chart_rendered === true) ? {display:'block'} : {display:'none'}}>
           <div style={{position:'relative', margin:'auto auto'}}>
             <div className={style.line_chart_meta}>
