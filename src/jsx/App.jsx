@@ -181,7 +181,7 @@ class App extends Component {
               id:'right',
               display:true,
               gridLines:{
-                display:true
+                display:false
               },
               position:'right',
               scaleLabel:{
