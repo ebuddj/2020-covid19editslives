@@ -120,7 +120,7 @@ class App extends Component {
             radius:0,
             yAxisID:'right'
           }],
-          labels:[]
+          labels:['']
         },
         options:{
           hover:{
@@ -160,7 +160,6 @@ class App extends Component {
               },
               scaleLabel:{
                 display:false,
-                labelString:'month'
               }
             }],
             yAxes:[{
@@ -220,7 +219,12 @@ class App extends Component {
             total_percent:values.total_percent
           }));
 
-          options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
+          if (values.date.split('-')[2] === '02') {
+            options.data.labels[options.data.labels.length - 2] = month_names[values.date.split('-')[1]];
+          }
+          else {
+            options.data.labels.push('');
+          }
           options.data.datasets[0].data.push(values.edits);
           options.data.datasets[1].data.push(values.total);
           options.data.datasets[2].data.push(values.total_percent);
