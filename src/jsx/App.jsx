@@ -226,12 +226,10 @@ class App extends Component {
             options.data.labels.push('');
           }
           // options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
-          console.log(options.data.labels)
           options.data.datasets[0].data.push(values.edits);
           options.data.datasets[1].data.push(values.total);
           options.data.datasets[2].data.push(values.total_percent);
           line_chart.update();
-
 
           if (data.values.length < 1) {
             clearInterval(interval);
