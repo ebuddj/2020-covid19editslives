@@ -107,7 +107,7 @@ class App extends Component {
             radius:0,
             order:99,
             yAxisID:'left'
-          },{
+          }/*,{
             backgroundColor:'rgba(0, 174, 102, 1)',
             borderColor:'#000',
             borderWidth:4,
@@ -117,7 +117,7 @@ class App extends Component {
             radius:0,
             order:77,
             yAxisID:'right'
-          }],
+          }*/],
           labels:[]
         },
         options:{
@@ -221,7 +221,7 @@ class App extends Component {
           options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
           options.data.datasets[0].data.push(values.edits);
           options.data.datasets[1].data.push(values.total);
-          options.data.datasets[2].data.push(values.total_percent);
+          // options.data.datasets[2].data.push(values.total_percent);
           line_chart.update();
 
           if (data.values.length < 1) {
