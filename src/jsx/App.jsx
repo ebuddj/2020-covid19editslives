@@ -150,8 +150,8 @@ class App extends Component {
             yAxes:[{
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
-                suggestedMin:0,
                 suggestedMax:10,
+                suggestedMin:0
               },
               gridLines:{
                 display:true
