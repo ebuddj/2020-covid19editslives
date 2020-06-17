@@ -63,9 +63,10 @@ body {
 }
 .app___2khK2 .logo___XsJkZ {
   position: absolute;
-  z-index: 2;
   top: 20px;
+  left: 100px;
   width: 300px;
+  z-index: 2;
 }
 .app___2khK2 #line_chart___aZAmd {
   clear: both;
