@@ -260,9 +260,9 @@ class App extends Component {
         <div className={style.date}></div>
         <div className={style.legend}>
           <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
-          <div className={style.lives}>{this.state.lives_cumulative} COVID-19 Lives</div>
-          <div className={style.edits}>{this.state.edits_cumulative} COVID-19 Edits</div>
-          <div ref={this.totalRef} className={style.total}>{this.state.edits_cumulative + this.state.lives_cumulative} COVID-19 Total</div>
+          <div className={style.lives}><span className={style.legend_value}>{this.state.lives_cumulative}</span> COVID-19 Lives</div>
+          <div className={style.edits}><span className={style.legend_value}>{this.state.edits_cumulative}</span> COVID-19 Edits</div>
+          <div ref={this.totalRef} className={style.total}><span className={style.legend_value}>{this.state.edits_cumulative + this.state.lives_cumulative + ''}</span> COVID-19 Total</div>
         </div>
         <div style={(this.state.line_chart_rendered === true) ? {display:'block'} : {display:'none'}}>
           <div style={{position:'relative', margin:'auto auto'}}>
