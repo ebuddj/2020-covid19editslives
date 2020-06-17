@@ -32,6 +32,7 @@ class App extends Component {
 
     // We need a ref for chart.js.
     this.lineChartRef = React.createRef();
+    this.totalRef = React.createRef();
   }
   componentDidMount() {
     setTimeout(() => {
@@ -229,6 +230,7 @@ class App extends Component {
             clearInterval(interval);
             options.data.datasets[2].hidden = false;
             options.options.scales.yAxes[1].display = true;
+            self.totalRef.current.style.display = 'block';
             line_chart.update(0);
           }
         }, 200);
@@ -260,6 +262,7 @@ class App extends Component {
           <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
           <div className={style.lives}>{this.state.lives_cumulative} COVID-19 Lives</div>
           <div className={style.edits}>{this.state.edits_cumulative} COVID-19 Edits</div>
+          <div ref={this.totalRef} className={style.total}>{this.state.edits_cumulative + this.state.lives_cumulative} COVID-19 Total</div>
         </div>
         <div style={(this.state.line_chart_rendered === true) ? {display:'block'} : {display:'none'}}>
           <div style={{position:'relative', margin:'auto auto'}}>
