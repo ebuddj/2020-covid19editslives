@@ -75,6 +75,8 @@ class App extends Component {
           date:values.date,
           edits:values.covid_edits_percent,
           lives:values.covid_lives_percent,
+          edits_cumulative:values.culumative_edits,
+          lives_cumulative:values.culumative_lives,
           total:(values.covid_lives_percent + values.covid_edits_percent)
         }
       });
@@ -170,6 +172,8 @@ class App extends Component {
             date:values.date,
             edits:values.edits,
             lives:values.lives,
+            edits_cumulative:values.edits_cumulative,
+            lives_cumulative:values.lives_cumulative,
             total:values.total
           }));
 
@@ -208,8 +212,8 @@ class App extends Component {
         <div className={style.date}></div>
         <div className={style.legend}>
           <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
-          <div className={style.lives}>{this.state.lives}% COVID-19 Lives</div>
-          <div className={style.edits}>{this.state.edits}% COVID-19 Edits</div>
+          <div className={style.lives}>{this.state.lives_cumulative} COVID-19 Lives</div>
+          <div className={style.edits}>{this.state.edits_cumulative} COVID-19 Edits</div>
         </div>
         <div style={(this.state.line_chart_rendered === true) ? {display:'block'} : {display:'none'}}>
           <div style={{position:'relative', margin:'auto auto'}}>
