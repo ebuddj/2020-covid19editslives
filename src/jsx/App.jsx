@@ -95,6 +95,7 @@ class App extends Component {
             fill:true,
             label:'COVID-19 Edits',
             radius:0,
+            order:99,
             yAxisID:'left'
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
@@ -104,24 +105,17 @@ class App extends Component {
             fill:true,
             label:'COVID-19 Lives',
             radius:0,
+            order:99,
             yAxisID:'left'
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
-            borderColor:'#1b4098',
-            borderWidth:3,
-            data:[self.state.edits_percent],
+            borderColor:'#000',
+            borderWidth:5,
+            data:[self.state.total_percent],
             fill:false,
-            label:'COVID-19 Edits',
+            label:'COVID-19 Total percent',
             radius:0,
-            yAxisID:'right'
-          },{
-            backgroundColor:'rgba(0, 174, 102, 1)',
-            borderColor:'#00AE66',
-            borderWidth:3,
-            data:[self.state.lives_percent],
-            fill:false,
-            label:'COVID-19 Lives',
-            radius:0,
+            order:77,
             yAxisID:'right'
           }],
           labels:[]
@@ -224,8 +218,7 @@ class App extends Component {
           options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
           options.data.datasets[0].data.push(values.edits);
           options.data.datasets[1].data.push(values.total);
-          options.data.datasets[2].data.push(values.edits_percent);
-          options.data.datasets[3].data.push(values.lives_percent);
+          options.data.datasets[2].data.push(values.total_percent);
           line_chart.update();
 
           if (data.values.length < 1) {
