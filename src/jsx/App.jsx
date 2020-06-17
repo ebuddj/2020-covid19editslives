@@ -151,7 +151,7 @@ class App extends Component {
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
                 suggestedMin:0,
-                suggestedMax:160,
+                suggestedMax:10,
               },
               gridLines:{
                 display:true
