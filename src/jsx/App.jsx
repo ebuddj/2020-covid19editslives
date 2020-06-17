@@ -190,7 +190,7 @@ class App extends Component {
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
-                suggestedMax:10,
+                suggestedMax:100,
                 suggestedMin:0
               }
             }]
