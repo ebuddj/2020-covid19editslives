@@ -73,11 +73,14 @@ class App extends Component {
       data.values = data.map((values) => {
         return {
           date:values.date,
-          edits:values.covid_edits_percent,
-          lives:values.covid_lives_percent,
+          edits:values.covid_edits,
+          lives:values.covid_lives,
+          edits_percent:values.covid_edits_percent,
+          lives_percent:values.covid_lives_percent,
           edits_cumulative:values.culumative_edits,
           lives_cumulative:values.culumative_lives,
-          total:(values.covid_lives_percent + values.covid_edits_percent)
+          total:(values.covid_lives + values.covid_edits),
+          total_percent:(values.covid_lives_percent + values.covid_edits_percent)
         }
       });
 
@@ -148,7 +151,7 @@ class App extends Component {
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
                 suggestedMin:0,
-                suggestedMax:100,
+                suggestedMax:160,
               },
               gridLines:{
                 display:true
@@ -172,9 +175,12 @@ class App extends Component {
             date:values.date,
             edits:values.edits,
             lives:values.lives,
+            edits_percent:values.edits_percent,
+            lives_percent:values.lives_percent,
             edits_cumulative:values.edits_cumulative,
             lives_cumulative:values.lives_cumulative,
-            total:values.total
+            total:values.total,
+            total_percent:values.total_percent
           }));
 
           options.data.labels.push((values.date.split('-')[2]) === '01' ?  month_names[values.date.split('-')[1]] : '');
