@@ -79,6 +79,9 @@ body {
 .app___2khK2 .legend___2jYuz .lives___1UF-6 {
   color: #00AE66;
 }
+.app___2khK2 .legend___2jYuz .total___1H-OV {
+  display: none;
+}
 .app___2khK2 #line_chart___aZAmd {
   clear: both;
   height: 100%;
