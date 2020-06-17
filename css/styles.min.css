@@ -61,12 +61,23 @@ body {
   z-index: 2;
   width: 100%;
 }
-.app___2khK2 .logo___XsJkZ {
+.app___2khK2 .legend___2jYuz {
+  font-family: verdana;
+  font-size: 30px;
+  font-weight: bold;
+  left: 100px;
   position: absolute;
   top: 20px;
-  left: 100px;
-  width: 300px;
   z-index: 2;
+}
+.app___2khK2 .legend___2jYuz .logo___XsJkZ {
+  width: 300px;
+}
+.app___2khK2 .legend___2jYuz .edits___2a_Jj {
+  color: #1b4098;
+}
+.app___2khK2 .legend___2jYuz .lives___1UF-6 {
+  color: #00AE66;
 }
 .app___2khK2 #line_chart___aZAmd {
   clear: both;
