@@ -87,7 +87,7 @@ class App extends Component {
             borderWidth:3,
             data:[self.state.edits],
             fill:true,
-            label:'Covid-19',
+            label:'COVID-19 Edits',
             radius:0
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
@@ -95,7 +95,7 @@ class App extends Component {
             borderWidth:3,
             data:[self.state.lives],
             fill:true,
-            label:'Covid-19',
+            label:'COVID-19 Lives',
             radius:0
           }],
           labels:[]
@@ -105,7 +105,13 @@ class App extends Component {
             enabled:false,
           },
           legend:{
-            display:false
+            align:'left',
+            position:'top',
+            display:true,
+            labels: {
+              fontSize:20,
+              fontStyle:'bold'
+            }
           },
           title:{
             display:false,
@@ -120,7 +126,7 @@ class App extends Component {
             xAxes:[{
               display:true,
               gridLines:{
-                display: false
+                display:false
               },
               ticks: {
                 autoSkip:false,
@@ -141,9 +147,12 @@ class App extends Component {
                 suggestedMin:0,
                 suggestedMax:100,
               },
-              display:false,
+              gridLines:{
+                display:true
+              },
+              display:true,
               scaleLabel:{
-                display:true,
+                display:false,
                 labelString:'Covid-19'
               }
             }]
