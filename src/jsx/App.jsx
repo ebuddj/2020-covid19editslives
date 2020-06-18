@@ -254,7 +254,7 @@ class App extends Component {
               options.data.datasets[2].hidden = false;
               options.options.scales.yAxes[1].display = true;
               self.totalRef.current.style.display = 'block';
-              self.lineChartMetaRef.current.style.right = '80px';
+              self.lineChartMetaRef.current.style.right = '110px';
               line_chart.update(0);
             }, 3000);
           }
