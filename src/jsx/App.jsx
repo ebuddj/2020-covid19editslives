@@ -129,11 +129,12 @@ class App extends Component {
           legend:{
             align:'left',
             display:true,
-            position:'top',
             labels: {
               fontSize:20,
               fontStyle:'bold'
-            }
+            },
+            onClick: false,
+            position:'top'
           },
           title:{
             display:false,
