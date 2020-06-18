@@ -154,7 +154,7 @@ class App extends Component {
               },
               ticks: {
                 autoSkip:false,
-                color:'#000000',
+                fontColor:'#444',
                 fontSize:20,
                 fontStyle:'bold',
                 maxRotation:0,
@@ -172,12 +172,15 @@ class App extends Component {
               },
               position:'left',
               scaleLabel:{
-                display:false,
-                labelString:'Covid-19'
+                display:true,
+                fontColor:'#444',
+                fontSize:14,
+                fontStyle:'bold',
+                labelString:'Number of COVID-19 items in the News Exchange'
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
-                color:'#000000',
+                fontColor:'#444',
                 fontSize:16,
                 fontStyle:'bold',
                 suggestedMax:10,
@@ -191,15 +194,18 @@ class App extends Component {
               },
               position:'right',
               scaleLabel:{
-                display:false,
-                labelString:'Covid-19'
+                fontColor:'#FF9900',
+                display:true,
+                fontSize:14,
+                fontStyle:'bold',
+                labelString:'COVID-19 Items\' percentage of News Exchange'
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
                 callback: function(value, index, values) {
                   return value + '%';
                 },
-                color:'#000000',
+                fontColor:'#444',
                 fontSize:16,
                 fontStyle:'bold',
                 suggestedMax:100,
