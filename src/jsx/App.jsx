@@ -228,10 +228,10 @@ class App extends Component {
           }));
 
           if (values.date.split('-')[2] === '03') {
-            options.data.labels[options.data.labels.length - 2] = month_names[values.date.split('-')[1]];
+            options.data.labels[options.data.labels.length - 2] = '|'
           }
           else if (values.date.split('-')[2] === '18') {
-            options.data.labels[options.data.labels.length - 2] = '|';
+            options.data.labels[options.data.labels.length - 2] = month_names[values.date.split('-')[1]]
           }
           else {
             options.data.labels.push('');
