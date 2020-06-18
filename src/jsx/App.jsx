@@ -115,7 +115,7 @@ class App extends Component {
             data:[self.state.total_percent],
             hidden:true,
             fill:false,
-            label:'COVID-19 Total percent',
+            label:'COVID-19 percentage',
             order:77,
             radius:0,
             yAxisID:'right'
@@ -128,7 +128,7 @@ class App extends Component {
           },
           legend:{
             align:'left',
-            display:false,
+            display:true,
             position:'top',
             labels: {
               fontSize:20,
