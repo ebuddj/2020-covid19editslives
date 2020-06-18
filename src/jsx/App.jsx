@@ -176,7 +176,7 @@ class App extends Component {
                 fontColor:'#444',
                 fontSize:14,
                 fontStyle:'bold',
-                labelString:'Number of COVID-19 items in the News Exchange'
+                labelString:'Number of COVID-19 Items in the News Exchange'
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
@@ -198,7 +198,7 @@ class App extends Component {
                 display:true,
                 fontSize:14,
                 fontStyle:'bold',
-                labelString:'COVID-19 Items\' percentage of News Exchange'
+                labelString:'COVID-19 Items\' Percentage of News Exchange'
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
