@@ -33,6 +33,7 @@ class App extends Component {
     // We need a ref for chart.js.
     this.lineChartRef = React.createRef();
     this.totalRef = React.createRef();
+    this.lineChartMetaRef = React.createRef();
   }
   componentDidMount() {
     setTimeout(() => {
@@ -110,7 +111,7 @@ class App extends Component {
             yAxisID:'left'
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
-            borderColor:'#000',
+            borderColor:'#FF9900',
             borderWidth:4,
             data:[self.state.total_percent],
             hidden:true,
@@ -128,12 +129,12 @@ class App extends Component {
           },
           legend:{
             align:'left',
-            display:true,
+            display:false,
             labels: {
               fontSize:20,
               fontStyle:'bold'
             },
-            onClick: false,
+            onClick:false,
             position:'top'
           },
           title:{
@@ -153,7 +154,7 @@ class App extends Component {
               },
               ticks: {
                 autoSkip:false,
-                color:'#000',
+                color:'#000000',
                 fontSize:20,
                 fontStyle:'bold',
                 maxRotation:0,
@@ -176,6 +177,9 @@ class App extends Component {
               },
               // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#axis-range-settings
               ticks: {
+                color:'#000000',
+                fontSize:16,
+                fontStyle:'bold',
                 suggestedMax:10,
                 suggestedMin:0
               }
@@ -195,6 +199,9 @@ class App extends Component {
                 callback: function(value, index, values) {
                   return value + '%';
                 },
+                color:'#000000',
+                fontSize:16,
+                fontStyle:'bold',
                 suggestedMax:100,
                 suggestedMin:0,
               }
@@ -237,6 +244,7 @@ class App extends Component {
             options.data.datasets[2].hidden = false;
             options.options.scales.yAxes[1].display = true;
             self.totalRef.current.style.display = 'block';
+            self.lineChartMetaRef.current.style.right = '80px';
             line_chart.update(0);
           }
         }, 200);
@@ -272,7 +280,7 @@ class App extends Component {
         </div>
         <div style={(this.state.line_chart_rendered === true) ? {display:'block'} : {display:'none'}}>
           <div style={{position:'relative', margin:'auto auto'}}>
-            <div className={style.line_chart_meta}>
+            <div className={style.line_chart_meta} ref={this.lineChartMetaRef}>
               <div>{date[2] + ' ' + month_names[date[1]]}<br /><span className={style.explainer}>COVID-19 =</span> {(this.state.total_percent)}% <span className={style.explainer}>of News Exchange</span></div>
             </div>
             <canvas id={style.line_chart} ref={this.lineChartRef}></canvas>
