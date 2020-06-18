@@ -230,6 +230,9 @@ class App extends Component {
           if (values.date.split('-')[2] === '03') {
             options.data.labels[options.data.labels.length - 2] = month_names[values.date.split('-')[1]];
           }
+          else if (values.date.split('-')[2] === '18') {
+            options.data.labels[options.data.labels.length - 2] = '|';
+          }
           else {
             options.data.labels.push('');
           }
@@ -241,11 +244,13 @@ class App extends Component {
 
           if (data.values.length < 1) {
             clearInterval(interval);
-            options.data.datasets[2].hidden = false;
-            options.options.scales.yAxes[1].display = true;
-            self.totalRef.current.style.display = 'block';
-            self.lineChartMetaRef.current.style.right = '80px';
-            line_chart.update(0);
+            setTimeout(() => {
+              options.data.datasets[2].hidden = false;
+              options.options.scales.yAxes[1].display = true;
+              self.totalRef.current.style.display = 'block';
+              self.lineChartMetaRef.current.style.right = '80px';
+              line_chart.update(0);
+            }, 3000);
           }
         }, 200);
       }
