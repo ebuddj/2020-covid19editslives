@@ -164,4 +164,6 @@
 {"date":"2020-06-20","edits":68,"lives":13,"covid_edits":23,"covid_lives":3,"covid_edits_percent":28,"covid_lives_percent":4,"culumative_edits":9663,"culumative_lives":1510},
 {"date":"2020-06-21","edits":94,"lives":6,"covid_edits":22,"covid_lives":1,"covid_edits_percent":22,"covid_lives_percent":1,"culumative_edits":9685,"culumative_lives":1511},
 {"date":"2020-06-22","edits":104,"lives":14,"covid_edits":46,"covid_lives":7,"covid_edits_percent":39,"covid_lives_percent":6,"culumative_edits":9731,"culumative_lives":1518},
-{"date":"2020-06-23","edits":95,"lives":22,"covid_edits":40,"covid_lives":10,"covid_edits_percent":34,"covid_lives_percent":9,"culumative_edits":9771,"culumative_lives":1528}]
+{"date":"2020-06-23","edits":95,"lives":22,"covid_edits":40,"covid_lives":10,"covid_edits_percent":34,"covid_lives_percent":9,"culumative_edits":9771,"culumative_lives":1528},
+{"date":"2020-06-24","edits":97,"lives":15,"covid_edits":42,"covid_lives":7,"covid_edits_percent":38,"covid_lives_percent":6,"culumative_edits":9813,"culumative_lives":1535},
+{"date":"2020-06-25","edits":99,"lives":17,"covid_edits":38,"covid_lives":9,"covid_edits_percent":33,"covid_lives_percent":8,"culumative_edits":9851,"culumative_lives":1544}]
