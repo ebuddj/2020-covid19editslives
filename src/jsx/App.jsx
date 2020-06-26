@@ -31,6 +31,7 @@ class App extends Component {
     };
 
     // We need a ref for chart.js.
+    this.appRef = React.createRef();
     this.lineChartRef = React.createRef();
     this.totalRef = React.createRef();
     this.lineChartMetaRef = React.createRef();
@@ -217,6 +218,8 @@ class App extends Component {
         type:'line'
       };
 
+      self.appRef.current.style.display = 'block';
+
       function updateChart() {
         // Update chart.
         let interval = setInterval(() => {
@@ -281,7 +284,7 @@ class App extends Component {
       path_prefix = 'https://raw.githubusercontent.com/ebuddj/2020-covid19stories/master/public/';
     }
     return (
-      <div className={style.app}>
+      <div className={style.app} ref={this.appRef}>
         <div className={style.date}></div>
         <div className={style.legend}>
           <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
