@@ -125,6 +125,7 @@ class App extends Component {
           labels:['']
         },
         options:{
+          aspectRatio:ratio,
           hover:{
             enabled:false,
           },
@@ -138,14 +139,6 @@ class App extends Component {
             onClick:false,
             position:'top'
           },
-          title:{
-            display:false,
-            text:''
-          },
-          tooltips:{
-            enabled:false,
-          },
-          aspectRatio:ratio,
           responsive:true,
           scales:{
             xAxes:[{
@@ -213,6 +206,13 @@ class App extends Component {
                 suggestedMin:0,
               }
             }]
+          },
+          title:{
+            display:false,
+            text:''
+          },
+          tooltips:{
+            enabled:false
           }
         },
         type:'line'
