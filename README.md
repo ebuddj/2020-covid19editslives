@@ -5,7 +5,7 @@
 ## Share of Covid-19 edits and lives on News Exchange
 
 **Sources**
-* 
+* [OurWorldInData](https://ourworldindata.org/coronavirus)
 
 **EBU links**
 * 
