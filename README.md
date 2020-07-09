@@ -4,8 +4,10 @@
 
 ## Share of Covid-19 edits and lives on News Exchange
 
+This is an EBU internal project to show how much Covid-19 related content was shared via the News Exchange during the outbreak. The animation and the technology can be used by the members.
+
 **Sources**
-* [OurWorldInData](https://ourworldindata.org/coronavirus)
+* 
 
 **EBU links**
 * 
