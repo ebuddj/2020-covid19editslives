@@ -14,7 +14,8 @@ const month_names = {
   '04': 'April',
   '05': 'May',
   '06': 'June',
-  '07': 'July'
+  '07': 'July',
+  '08': 'August'
 };
 
 class App extends Component {
