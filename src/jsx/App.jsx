@@ -32,7 +32,8 @@ class App extends Component {
       line_chart_show_meta:false,
       lives:0,
       total:0,
-      edits:0
+      edits:0,
+      total_percent:0
     };
 
     // We need a ref for chart.js.
@@ -77,7 +78,7 @@ class App extends Component {
         return false;
       }
 
-        // console.log(data)
+      // console.log(data)
       data.values = data.map((values) => {
         return {
           date:values.date,
@@ -102,22 +103,22 @@ class App extends Component {
             data:[self.state.edits],
             fill:true,
             label:'COVID-19 Edits',
-            radius:0,
             order:99,
+            radius:0,
             yAxisID:'left'
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
-            borderColor:'#00AE66',
+            borderColor:'#00ae66',
             borderWidth:3,
             data:[self.state.lives],
             fill:true,
             label:'COVID-19 Lives',
-            radius:0,
             order:99,
+            radius:0,
             yAxisID:'left'
           },{
             backgroundColor:'rgba(0, 174, 102, 1)',
-            borderColor:'#FF9900',
+            borderColor:'#ff9900',
             borderWidth:4,
             data:[self.state.total_percent],
             hidden:true,
@@ -240,12 +241,13 @@ class App extends Component {
             total:values.total,
             total_percent:values.total_percent
           }));
-
           if (values.date.split('-')[2] === '03') {
             options.data.labels[options.data.labels.length - 2] = '|'
+            options.data.labels.push('');
           }
           else if (values.date.split('-')[2] === '18') {
             options.data.labels[options.data.labels.length - 2] = month_names[values.date.split('-')[1]]
+            options.data.labels.push('');
           }
           else {
             options.data.labels.push('');
