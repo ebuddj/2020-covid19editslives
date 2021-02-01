@@ -292,6 +292,7 @@ class App extends Component {
     }
     return (
       <div className={style.app} ref={this.appRef}>
+        <div className={style.next_link}><a href="https://ebuddj.github.io/2021-covid19editslives/">Go to 2021 data</a></div>
         <div className={style.date}></div>
         <div className={style.legend}>
           <div><img src={path_prefix + 'img/ebu-logo.png'} className={style.logo}/></div>
