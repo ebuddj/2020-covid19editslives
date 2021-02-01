@@ -51,6 +51,16 @@ body {
 .app___2khK2 button:hover {
   background-color: #ccc;
 }
+.app___2khK2 .next_link___-vZ_g {
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  top: 30px;
+}
+.app___2khK2 .next_link___-vZ_g a {
+  color: #000;
+  font-family: verdana;
+}
 .app___2khK2 .date___2zbrl {
   font-family: verdana;
   font-size: 30px;
